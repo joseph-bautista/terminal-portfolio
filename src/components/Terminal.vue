@@ -119,22 +119,25 @@ export default {
       } else if (cmd.includes('skills.json')) {
         return [
           '{',
-          `   <i class="purple">frontEnd</i>: [ '<i class="blue">javascript</i>', '<i class="blue">vuejs</i>', '<i class="blue">typescript</i>', '<i class="blue">react</i>', '<i class="blue">scss</i>', '<i class="blue">sass</i>' ],`,
-          `   <i class="purple">backEnd</i>: [ '<i class="blue">python</i>', '<i class="blue">java</i>', '<i class="blue">node.js</i>', '<i class="blue">oracle sql</i>', '<i class="blue">vite</i>', '<i class="blue">c++</i>', '<i class="blue">c#</i>', '<i class="blue">pandas</i>', '<i class="blue">matplotlib</i>' ],`,
-          `   <i class="purple">tools</i>: [ '<i class="blue">jira</i>', '<i class="blue">gitlab</i>', '<i class="blue">git</i>' ],`,
-          `   <i class="purple">design</i>: [ '<i class="blue">figma</i>' ],`,
-          `   <i class="purple">misc</i>: [ '<i class="blue">jsx</i>', '<i class="blue">tsx</i>' ]`,
+          `   <i class="yellow">Programming Languages</i>: [ '<i class="purple">PHP</i>', '<i class="purple">JavaScript</i>', '<i class="purple">Python</i>', '<i class="purple">C</i>' ],`,
+
+          `   <i class="yellow">Frameworks and Libraries</i>: [ '<i class="purple">Laravel</i>', '<i class="purple">NodeJS</i>', '<i class="purple">ExpressJS</i>', '<i class="purple">Django</i>', '<i class="purple">Django Rest Framework</i>', '<i class="purple">ReactJS</i>', '<i class="purple">VueJS</i>' ],`,
+
+          `   <i class="yellow">Tools</i>: [ '<i class="purple">Jira</i>', '<i class="purple">Gitlab</i>', '<i class="purple">Git</i>', '<i class="purple">GitHub</i>', '<i class="purple">Bitbucket</i>', '<i class="purple">Postman</i>', '<i class="purple">Docker</i>', '<i class="purple">AWS</i>' ],`,
+          
+
+          `   <i class="yellow">Operating Systems</i>: [ '<i class="purple">MacOs</i>', '<i class="purple">Linux</i>', '<i class="purple">Windows</i>' ]`,
           '}'
         ]
       } else if (cmd.includes('contact.md')) {
-        ' '
         return [
+          ' work in progress'
         ]
       } else if (cmd.includes('.secret')) {
         if (this.user !== 'guest') {
           return [
             '<img src="https://statuscage.com/404" alt="Not Found Image" style="max-width:4200px; max-height: 400px;" />'
-          ] // secwettttt
+          ]
         } else {
           return [
             'cat: .secret: Permission denied for user <i class="user">guest</i>',
@@ -153,27 +156,9 @@ export default {
         ]
       } else if (cmd.startsWith('su ') && cmd.length > 3) {
         this.user = cmd.replace('su ', '')
-        const currentDate = new Date().toLocaleString('en-US', { timeZoneName: 'short' })
         return [
           `logged in as <i class="user">${this.user}</i>.`,
-          '<span class="ascii">···················································</span>',
-          '<span class="ascii">:      #                                          :</span>',
-          '<span class="ascii">:      #  ####   ####  ###### #####  #    #       :</span>',
-          '<span class="ascii">:      # #    # #      #      #    # #    #       :</span>',
-          '<span class="ascii">:      # #    #  ####  #####  #    # ######       :</span>',
-          '<span class="ascii">:#     # #    #      # #      #####  #    #       :</span>',
-          '<span class="ascii">:#     # #    # #    # #      #      #    #       :</span>',
-          '<span class="ascii">: #####   ####   ####  ###### #      #    #       :</span>',
-          '<span class="ascii">:                                                 :</span>',
-          '<span class="ascii">:######                                           :</span>',
-          '<span class="ascii">:#     #   ##   #    # ##### #  ####  #####   ##  :</span>',
-          '<span class="ascii">:#     #  #  #  #    #   #   # #        #    #  # :</span>',
-          '<span class="ascii">:######  #    # #    #   #   #  ####    #   #    #:</span>',
-          '<span class="ascii">:#     # ###### #    #   #   #      #   #   ######:</span>',
-          '<span class="ascii">:#     # #    # #    #   #   # #    #   #   #    #:</span>',
-          '<span class="ascii">:######  #    #  ####    #   #  ####    #   #    #:</span>',
-          '<span class="ascii">···················································</span>',
-          `<i class="grey">Last login: ${currentDate}</i>`,
+          
           ' ',
           `Hi <i class="user">${this.user}</i>, I'm <i class="pink" style="font-size:19px">Joseph Bautista.👋</i>`,
           ' ',
