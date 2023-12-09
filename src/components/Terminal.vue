@@ -59,6 +59,8 @@ export default {
         return this.su(cmd)
       } else if (cmd === 'help' || cmd === 'Help') {
         return this.help()
+      } else if (cmd === 'exit' || cmd === 'Exit') {
+        return this.exit()
       } else if (cmd !== '') {
         return this.nope(cmd)
       }
@@ -111,10 +113,13 @@ export default {
         return ['portfolio.md \t skills.json \t contact.md \t <i class="yellow">.secret</i>']
       }
     },
+    exit: function () {
+      return ['work in progress']
+    },
     cat: function (cmd) {
       if (cmd.includes('portfolio.md')) {
         return [
-          ' work in progress'
+          'work in progress'
         ]
       } else if (cmd.includes('skills.json')) {
         return [
@@ -181,8 +186,9 @@ export default {
         '<i class="yellow">whoami</i> \t\t <i class="grey">learn more about me</i>',
         '<i class="yellow">cat</i> <i class="light">FILENAME</i> \t <i class="grey">show filename content</i>',
         '<i class="yellow">clear</i> \t\t <i class="grey">clear current screen</i>',
+        '<i class="yellow">exit</i> \t\t <i class="grey">to exit command-line interface</i>',
       ]
-    }
+    },
   }
 }
 </script>
