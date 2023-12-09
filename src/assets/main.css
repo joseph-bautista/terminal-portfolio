@@ -1,0 +1,41 @@
+@import './base.css';
+
+#app {
+  font-family: 'Source Code Pro', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  line-height: 1.35rem;
+}
+
+
+ol, 
+ul {
+  list-style: none;
+}
+
+.ascii {
+  color: white !important;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}

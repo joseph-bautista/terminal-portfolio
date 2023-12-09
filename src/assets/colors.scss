@@ -1,0 +1,126 @@
+$white: #F8F8F0;
+$red: #e78284;
+$blue: #8aadf4;
+$orange: #ef9f76;
+$purple: #babbf1;
+$yellow: #f3d8a2;
+$grey: #D9D9D9;
+$pink: #f29a86;
+$links: #f2d5cf;
+$green: #92e35c;
+$teal: #82d8cd;
+
+// Default styles for all screen sizes
+
+//links
+a {
+  color: $links;
+  background-color: rgba($links, 0.1);
+  &:hover {
+    background-color: rgba($links, 0.2);
+  }
+  padding: 2px;
+}
+
+
+.yellow { color: $yellow }
+.green {color: $green }
+.teal { color: $teal }
+.grey { color: $grey }
+.red { color: $red }
+.orange { color: $orange }
+.purple { color: $purple }
+.pink { color: $pink }
+.blue { color: $blue }
+.links { color: $links }
+
+/* Styles for the toggle button */
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 59px;
+  height: 34px;
+  background-color: #B3B3B3;
+  border-radius: 34px;
+  transform: translateY(-50%); /* Center vertically */
+  right: 11px;
+  top: 3.5%;
+}
+
+/* Hide the default checkbox input */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+// .mode-label {
+//   position: absolute;
+//   margin-top: 30px; 
+//   /* Add margin to separate the label from the button */
+//   text-align: center; /* Center-align the label */
+// }
+
+/* The slider (round or rectangular part) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 32px; /* Adjust the width */
+  height: 32px; /* Adjust the height */
+  background-color: #B3B3B3; /* Default background color for the slider */
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  transform: translateX(0);
+  border-radius: 50%; /* Rounded slider shape */
+  
+}
+
+/* The thumb (circle or dot inside the slider) */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 34px;
+  width: 34px; /* Default color of the thumb */
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%; /* Rounded thumb shape */
+  transform: translateX(1); /* Initial position */
+  left: 1px; /* Adjust the left position to center the thumb */
+}
+
+/* Thumb color for the light mode */
+.light-mode .slider:before {
+  background-color: gray /* Light mode thumb color */
+}
+
+/* Thumb color for the dark mode */
+.dark-mode .slider:before {
+  background-color: $pink; /* Dark mode thumb color */
+}
+
+/* Move the round thumb on click */
+.switch input:checked + .slider:before {
+  transform: translateX(26px); /* Move it to the right */
+}
+
+.typewriter span {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end), blink-caret 1s step-end infinite;
+  border-right: 3px solid transparent;
+  padding: 10px;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 13ch; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: gray; }
+}
