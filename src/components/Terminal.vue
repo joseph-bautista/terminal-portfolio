@@ -114,7 +114,22 @@ export default {
       }
     },
     exit: function () {
-      return ['work in progress']
+      return [
+        'work in progress'
+      ]
+    },
+    whoami: function () {
+      return [
+        `Hey there, friend!`,
+        ' ',
+        `I'm Joseph – a software engineer on a mission to make tech waves! 🌊 With about 5 years under my belt, I've been diving into Full-stack development, focusing on the backend using cool tools like PHP, Laravel, JavaScript, and MySQL. But hey, I'm no one-trick pony! I'm always hungry to learn and have been tinkering with Python, Django, NodeJS, Express.js, ReactJS, VueJS, jQuery, Docker, and AWS. Phew, that's quite a list, huh?`,
+        ' ',
+        `Lately, I've been captivated by Blockchain and Artificial Intelligence – they're like the superheroes of the tech world, aren't they?`,
+        ' ',
+        `My strength? I'd say it's my thirst for learning and how I adapt to any coding habitat. But, like everyone, I've got quirks. Distractions can throw me off, so I've mastered the art of taking short breaks. Oh, and when I'm not deep in code, you'll catch me cruising up mountain roads for a quick recharge.`,
+        ' ',
+        `In a nutshell, I'm a tech enthusiast with a toolkit filled with diverse skills, a passion for learning that never fizzles out, and a drive to use tech to make life better. Let's team up and craft something that'll have a positive impact worldwide! 🚀`
+      ]
     },
     cat: function (cmd) {
       if (cmd.includes('portfolio.md')) {
@@ -136,7 +151,13 @@ export default {
         ]
       } else if (cmd.includes('contact.md')) {
         return [
-          ' work in progress'
+          '<a href="mailto:josephreuben.bautista@gmail.com">josephreuben.bautista@gmail.com</a>',
+          '<a href="https://github.com/joseph-bautista" target="blank">github</a>',
+          '<a href="https://twitter.com/jayrbautista26" target="_blank">twitter</a>',
+          '<a href="https://www.linkedin.com/in/joseph-bautista" target="_blank">linkedin</a>',
+          '<a href="https://joseph-bautista.hashnode.dev" target="_blank">blog</a>',
+          '<a href="https://www.youtube.com/@joseph-bautista" target="_blank">youtube</a>',
+          '<a href="https://www.instagram.com/jayrbautista26" target="_blank">instagram</a>',
         ]
       } else if (cmd.includes('.secret')) {
         if (this.user !== 'guest') {
